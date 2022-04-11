@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    <form method="post" action="https://jkorpela.fi/cgi-bin/echo.cgi">
+        <h3 >PERSONA</h3>
+        <fieldset>
+            <legend style="background-color: yellow;" >Datos de la persona</legend>
+            
+            <table>
+                <tr>
+                    <td><label>Apellido</label></td>
+                    <td>
+                        <input type='text' name='Apellido'  maxlength="30" 
+                        required />
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="Nombre" >Nombres</label></td>
+                    <td><input type='text' name='Nombres' id="Nombre" 
+                    placeholder="Ingrese primer y segundo nombre" maxlength="30" required /></td>
+                </tr>
+                <tr>
+                    <td><label>Sexo</label></td>
+                    <td>
+                        <input type="radio"
+                               name="sexo"
+                               id="Masculino"
+                               value="Masc" />
+                        <label for="Masculino">Masculino</label>
+                        <input type="radio"
+                               name="sexo"
+                               id="Femenino"
+                               value="Fem" />
+                        <label for="Femenino">Femenino</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Tipo Documento</label></td>
+                    <td>
+                        <select name="TipoDocumento">
+                            <option  selected value=""></option>
+                            <option  value="DNI">Documento Nacional de Identidad</option>
+                            <option value="LC">Libreta Cívica</option>
+                            <option value="LEN">Libreta de Enrolamiento</option>
+                            <option  value="PSP">Pasaporte</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>N&uacute;mero de Documento</label></td>
+                    <td><input type='number' name='NumeroDocumento' /></td>
+                </tr>
+                <tr>
+                    <td><label>Fecha Nacimiento</label></td>
+                    <td>
+                        <input type='date' name="FechaNacimiento" id='FechaNacimiento' />
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Tel&eacute;fono</label></td>
+                    <td>
+                        <input type='number' value="0054" disabled />
+                        <input type='number' name="Teléfono"  />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Ingresos Mensuales</label></td>
+                    <td><input type='number' name='IngresosMensuales' step="0.01" /></td>
+                </tr>
+                
+                <tr>
+                    <td><label>Estado civil</label></td>
+                    <td>
+                        <select name="estado civil" size="5">
+                            <option value="s">Soltero/a</option>
+                            <option value="c">Casado/a</option>
+                            <option value="d">Divorciado/a</option>
+                            <option value="v">Viudo/a</option>
+                            <option value="" selected>(Sin selección)</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Observaciones</label></td>
+                    <td>
+                        <textarea rows="5" cols="50" name="Observaciones" placeholder="Ingrese sus comentarios aqui">
+                        </textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="checkbox"
+                               name="TieneAutoPropio"
+                               checked
+                        />
+                        <label for="TieneAutoPropio">Tiene Auto Propio</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="checkbox"
+                               id="TieneCasaPropia"
+                               name="TieneCasaPropia"
+                               checked                                
+                               />
+                        <label for="TieneCasaPropia">Tiene Casa Propia</label>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        
+       
+        <div id="divUsuario">
+        <fieldset>
+            <legend style="background-color: yellow;">Usuario</legend>
+
+            <table>
+                <tr>
+                    <td><label>Username</label></td>
+                    <td><input type='text' name='username' maxlength="20" required/></td>
+                </tr>
+                <tr>
+                <td><label>Password</label></td>
+                <td><input type='password' name='password' maxlength="20" required /></td>
+            </tr>
+            </table>
+        </fieldset>
+    </div>
+        
+        
+        </br>
+        <button type="submit" >Grabar</button>
+        &nbsp;
+        <input type='reset' value='Reiniciar formulario' />
+    </form>
+    <br /><br />
+    <a href="/index.html">Volver</a>
+</body>
+</html>
